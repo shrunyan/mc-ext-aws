@@ -1,0 +1,27 @@
+{
+  "name": "mc-ext-aws",
+  "version": "1.0.0",
+  "description": "Extend Mission Control with AWS services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrunyan/mc-ext-aws.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrunyan/mc-ext-aws/issues"
+  },
+  "homepage": "https://github.com/shrunyan/mc-ext-aws#readme",
+  "dependencies": {
+    "aws-sdk": "2.2.23"
+  },
+  "devDependencies": {
+    "sinon": "1.17.2",
+    "standard": "5.4.1",
+    "tape": "4.2.2"
+  }
+}
