@@ -18,5 +18,9 @@
   "homepage": "https://github.com/shrunyan/mc-ext-aws#readme",
   "dependencies": {
     "aws-sdk": "2.2.23"
+  },
+  "devDependencies": {
+    "sinon": "1.17.2",
+    "tape": "4.2.2"
   }
 }
