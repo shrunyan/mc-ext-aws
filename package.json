@@ -7,7 +7,7 @@
     "node": ">=5.0.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/standard"
+    "test": "node_modules/.bin/standard && node_modules/.bin/tape test/**/spec.*.js"
   },
   "repository": {
     "type": "git",
