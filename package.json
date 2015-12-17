@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Extend Mission Control with AWS services.",
   "main": "index.js",
+  "engines": {
+    "node": ">=5.0.0"
+  },
   "scripts": {
     "test": "node_modules/.bin/standard"
   },
