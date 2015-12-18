@@ -1,9 +1,15 @@
-# mc-ext-aws
+# AWS Extension for [Mission Control](https://github.com/space-race/mission-control)
 #### Extends Mission Control with AWS services.
 
 This is a [Mission Control](https://github.com/space-race/mission-control) extension for consuming AWS services in your pipelines.
 
 [AWS Nodejs SDK](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/_index.html)
+
+## Installing
+
+```
+npm install --save mc-ext-aws
+```
 
 ## Setting up Your AWS Credentials
 
