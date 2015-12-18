@@ -7,7 +7,7 @@ const ec2 = new AWS.EC2({
 })
 
 module.exports = {
-  name: 'create-ec2-instance',
+  name: 'ec2-run-instance',
   description: 'Given an ami_id creates an EC2 instance on AWS.',
   icon: '',
   options: {
