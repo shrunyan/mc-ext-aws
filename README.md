@@ -1,6 +1,8 @@
 # AWS Extension for [Mission Control](https://github.com/space-race/mission-control)
 #### Extends Mission Control with AWS services.
 
+[![Build Status](https://travis-ci.org/space-race/mc-ext-aws.svg?branch=master)](https://travis-ci.org/space-race/mc-ext-aws)
+
 This is a [Mission Control](https://github.com/space-race/mission-control) extension for consuming AWS services in your pipelines.
 
 [AWS Nodejs SDK](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/_index.html)
