@@ -14,7 +14,7 @@ module.exports = {
   options: {
     ami_id: {
       name: 'AMI ID',
-      description: 'Provide the AMI ID to use when creating this EC2 instance.'
+      description: 'Provide the AMI ID to use when creating this EC2 instance.',
       required: true
     },
     region: {}
