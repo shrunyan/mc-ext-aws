@@ -17,7 +17,11 @@ module.exports = {
       description: 'Provide the AMI ID to use when creating this EC2 instance.',
       required: true
     },
-    region: {}
+    region: {
+      name: 'AWS Region',
+      description: 'Specific the EC2 region you would like to start this instance in.',
+      required: false
+    }
   },
   execute: (stage) => {
     let opts = stage.options()
