@@ -1,6 +1,6 @@
 {
   "name": "mc-ext-aws",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extend Mission Control with AWS services.",
   "main": "index.js",
   "engines": {
