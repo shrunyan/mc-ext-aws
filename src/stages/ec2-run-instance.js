@@ -2,12 +2,8 @@
 
 let AWS = require('aws-sdk')
 
-const ec2 = new AWS.EC2({
-  region: 'us-east-1'
-})
-
 module.exports = {
-  id: 'ec2-run-instance',
+  id: 'ec2_run_instance',
   name: 'EC2 Run Instance',
   description: 'Given an ami_id creates an EC2 instance on AWS.',
   icon: '',
@@ -24,18 +20,30 @@ module.exports = {
     }
   },
   execute: (stage) => {
-    let opts = stage.options()
+    let opts = {
+      ImageId: stage.option('ami_id') || 'ami-1624987f',
+      InstanceType: stage.option('instance_type') || 't1.micro',
+      MinCount: stage.option('min_count') || 1,
+      MaxCount: stage.option('max_count') || 1,
+      // DryRun: true
+    }
+    let ec2 = new AWS.EC2({
+      region: stage.option('region') || 'us-east-1'
+    })
 
-    stage.log(`Begin EC2 instance creation for ami_id: ${opts.ImageId}`)
+    stage.log('EC2 | STARTED | ' + JSON.stringify(opts))
+    stage.running()
 
     ec2.runInstances(opts, (err, data) => {
       if (err) {
-        stage.log(`Failed to create EC2 instance: ${err}`)
+        stage.log('EC2 | FAILED | ' + JSON.stringify(err))
         stage.fail(err)
       } else {
-        stage.log(`Successfully created EC2 instance: ${err}`)
+        stage.log('EC2 | SUCCESS | ' + JSON.stringify(data))
         stage.succeed(data)
       }
+
     })
+
   }
 }

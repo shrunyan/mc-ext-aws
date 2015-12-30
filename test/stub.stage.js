@@ -14,6 +14,7 @@ let stage = {
       stage.trigger('fail', err)
     }
   },
+  option: key => stage._opts[key],
   options: () => stage._opts,
   log: msg => console.log(msg),
   on: (action, cb) => stage.events[action] = cb,
