@@ -13,6 +13,11 @@ module.exports = {
       description: 'Provide the AMI ID to use when creating this EC2 instance.',
       required: true
     },
+    instance_type: {
+      name: 'Instance Type',
+      description: 'Provide the [instance type](https://aws.amazon.com/ec2/instance-types/) you would like to create. e.g. t2.medium',
+      required: true
+    },
     region: {
       name: 'AWS Region',
       description: 'Specific the EC2 region you would like to start this instance in.',
@@ -24,8 +29,7 @@ module.exports = {
       ImageId: stage.option('ami_id') || 'ami-1624987f',
       InstanceType: stage.option('instance_type') || 't1.micro',
       MinCount: stage.option('min_count') || 1,
-      MaxCount: stage.option('max_count') || 1,
-      // DryRun: true
+      MaxCount: stage.option('max_count') || 1
     }
     let ec2 = new AWS.EC2({
       region: stage.option('region') || 'us-east-1'
@@ -42,8 +46,6 @@ module.exports = {
         stage.log('EC2 | SUCCESS | ' + JSON.stringify(data))
         stage.succeed(data)
       }
-
     })
-
   }
 }
